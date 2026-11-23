@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B0D10">
+  <title>{% block title %}聯大學分規劃{% endblock %}｜國立聯合大學</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="聯大學分規劃首頁"><span class="brand-mark">NU</span><span><strong>聯大學分規劃</strong><small>NUU CREDIT PLANNER</small></span></a>
+    <span class="privacy-label"><span class="privacy-dot"></span>資料僅在你的瀏覽器暫存</span>
+  </header>
+  <main class="shell">{% block content %}{% endblock %}</main>
+  <footer class="footer"><span>校務核對提醒</span><p>所有結果皆為「依目前輸入門檻、修課紀錄與課程池推算」，不代表校方正式審核或最新官方開課資料。畢業學分認列、擋修、抵免與實際開課，請以聯大教務處及所屬系辦公告為準。</p></footer>
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+</html>
